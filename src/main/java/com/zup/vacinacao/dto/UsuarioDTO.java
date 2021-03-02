@@ -17,8 +17,8 @@ public class UsuarioDTO {
 	@NotBlank(message = "{campo.nome.obrigatorio}")
 	private String nome;
 	
-	@Email
-	@NotBlank(message = "{campo.email.valido}")
+	@Email(message = "{campo.email.valido}")
+	@NotBlank(message = "{campo.email.obrigatorio}")
 	private String email;
 	
 	@CPF(message = "{campo.cpf.valido}")
