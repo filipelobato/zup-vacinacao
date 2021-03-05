@@ -26,7 +26,7 @@ public class UsuarioController {
 	
 	@PostMapping
 	public ResponseEntity<UsuarioDTO> adicionar(@RequestBody @Valid UsuarioDTO dto) {
-		UsuarioDTO usuarioDTO = new UsuarioDTO(dto);
+		UsuarioDTO usuarioDTO = dto.semID();
 		
 		usuarioDTO = cadastroUsuario.salvar(usuarioDTO);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")

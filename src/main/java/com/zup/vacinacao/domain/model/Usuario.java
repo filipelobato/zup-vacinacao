@@ -29,6 +29,9 @@ public class Usuario {
 	@Column(nullable = false)
 	private LocalDate dataNascimento;
 	
+	public Usuario() {
+	}
+
 	public Usuario(Long id, String nome, String email, String cpf, LocalDate dataNascimento) {
 		this.id = id;
 		this.nome = nome;

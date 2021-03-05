@@ -35,11 +35,8 @@ public class UsuarioDTO {
 		this.dataNascimento = dataNascimento;
 	}
 	
-	public UsuarioDTO(UsuarioDTO dto) {
-		this.nome = dto.getNome();
-		this.email = dto.getEmail();
-		this.cpf = dto.getCpf();
-		this.dataNascimento = dto.getDataNascimento();
+	public UsuarioDTO semID() {
+		return new UsuarioDTO(this.getNome(), this.getEmail(), this.getCpf(), this.getDataNascimento());
 	}
 	
 	public UsuarioDTO(Usuario entity) {
