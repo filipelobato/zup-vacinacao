@@ -30,7 +30,7 @@ public class UsuarioController {
 		
 		usuarioDTO = cadastroUsuario.salvar(usuarioDTO);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
-				.buildAndExpand(dto.getId()).toUri();
+				.buildAndExpand(usuarioDTO.getId()).toUri();
 		return ResponseEntity.created(uri).body(usuarioDTO);
 	}
 }

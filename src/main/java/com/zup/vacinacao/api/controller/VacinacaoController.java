@@ -30,7 +30,7 @@ public class VacinacaoController {
 		
 		vacinacaoDTO = cadastroVacinacao.salvar(vacinacaoDTO);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
-				.buildAndExpand(dto.getId()).toUri();
+				.buildAndExpand(vacinacaoDTO.getId()).toUri();
 		return ResponseEntity.created(uri).body(vacinacaoDTO);
 	}
 	
